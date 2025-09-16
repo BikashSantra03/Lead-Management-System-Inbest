@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGODB_URI")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  password  String // Hashed
+  role      Role     @default(SALES_REP)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  assignedLeads Lead[] @relation("AssignedToUser") // Leads assigned to this rep
+  createdLeads  Lead[] @relation("CreatedByUser") // Leads created by manager
+
+  @@map("users")
+}
+
+model Lead {
+  id         String     @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  email      String?
+  phone      String?
+  status     LeadStatus @default(NEW)
+  notes      String?
+  assignedTo String?    @db.ObjectId // User ID of Sales Rep
+  createdBy  String     @db.ObjectId // User ID of Manager
+  activities Activity[]
+
+  userAssignedTo User? @relation("AssignedToUser", fields: [assignedTo], references: [id])
+  userCreatedBy  User  @relation("CreatedByUser", fields: [createdBy], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("leads")
+}
+
+model Activity {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  type      String // e.g., "ASSIGNMENT", "ENGAGE"
+  note      String
+  timestamp DateTime @default(now())
+
+  leadId String @db.ObjectId
+  lead   Lead   @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  @@map("activities")
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  SALES_REP
+}
+
+enum LeadStatus {
+  NEW
+  ASSIGNED
+  ENGAGED
+  DISPOSED
+}
