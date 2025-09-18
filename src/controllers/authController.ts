@@ -96,7 +96,6 @@ export const updatePassword = async (req: AuthRequest, res: Response) => {
     }
 };
 
-
 export const createInitAdmin = async (req: Request, res: Response) => {
     try {
         // Validate input

@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { Response } from "express";
 import { Role } from "@prisma/client";
 import {
     createLead,
