@@ -6,10 +6,9 @@ import {
     registerSchema,
     loginSchema,
     adminRegisterSchema,
+    updatePasswordSchema,
 } from "../utils/validators";
 import { Role } from "@prisma/client";
-
-
 
 export const loginUser = async (data: z.infer<typeof loginSchema>) => {
     const user = await prisma.user.findUnique({ where: { email: data.email } });
@@ -34,8 +33,6 @@ export const loginUser = async (data: z.infer<typeof loginSchema>) => {
     return { user: { id: user.id, email: user.email, role: user.role }, token };
 };
 
-
-
 export const registerUser = async (data: z.infer<typeof registerSchema>) => {
     // Check if user already exists
     const existingUser = await prisma.user.findUnique({
@@ -51,7 +48,34 @@ export const registerUser = async (data: z.infer<typeof registerSchema>) => {
     });
 };
 
+export const updateUserPassword = async (
+    userId: string,
+    data: z.infer<typeof updatePasswordSchema>
+) => {
+    // Find user by ID
+    const user = await prisma.user.findUnique({
+        where: { id: userId },
+    });
+    if (!user) {
+        throw new Error("User not found");
+    }
 
+    // Verify current password
+    if (!(await bcrypt.compare(data.currentPassword, user.password))) {
+        throw new Error("Current password is incorrect");
+    }
+
+    // Hash new password
+    const hashedPassword = await bcrypt.hash(data.newPassword, 10);
+
+    // Update password
+    await prisma.user.update({
+        where: { id: userId },
+        data: { password: hashedPassword },
+    });
+
+    return { message: "Password updated successfully" };
+};
 
 export const registerAdmin = async (
     data: z.infer<typeof adminRegisterSchema>
@@ -79,11 +103,7 @@ export const registerAdmin = async (
 
     // Create admin user
     const user = await prisma.user.create({
-        data: {
-            email: data.email,
-            password: hashedPassword,
-            role: data.role,
-        },
+        data: { ...data, password: hashedPassword },
     });
 
     return { id: user.id, email: user.email, role: user.role };

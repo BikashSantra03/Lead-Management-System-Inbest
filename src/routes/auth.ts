@@ -7,6 +7,7 @@ import {
     createInitAdmin,
     login,
     register,
+    updatePassword,
 } from "../controllers/authController";
 
 const router = express.Router();
@@ -19,6 +20,8 @@ router.post(
     requireRole([Role.ADMIN]),
     register
 ); // Admin-only
+
+router.put("/update-password", authenticateToken, updatePassword);
 
 router.post("/init-admin", createInitAdmin); // One-time admin creation, no auth required
 

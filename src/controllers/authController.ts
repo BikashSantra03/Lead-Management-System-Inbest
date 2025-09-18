@@ -4,12 +4,15 @@ import {
     loginUser,
     registerAdmin,
     registerUser,
+    updateUserPassword,
 } from "../services/authService";
 import {
     adminRegisterSchema,
     loginSchema,
     registerSchema,
+    updatePasswordSchema,
 } from "../utils/validators";
+import { AuthRequest } from "../types";
 
 export const login = async (req: Request, res: Response) => {
     try {
@@ -60,6 +63,39 @@ export const register = async (req: Request, res: Response) => {
         });
     }
 };
+
+export const updatePassword = async (req: AuthRequest, res: Response) => {
+    try {
+        // Validate input
+        const validated = updatePasswordSchema.parse(req.body);
+
+        // Ensure user is authenticated
+        if (!req.user) {
+            return res
+                .status(401)
+                .json({ success: false, message: "Unauthorized" });
+        }
+
+        // Update password for the authenticated user
+        const result = await updateUserPassword(req.user.id, validated);
+        res.json({
+            success: true,
+            message: result.message,
+        });
+    } catch (error) {
+        if (error instanceof z.ZodError) {
+            const message = error.issues
+                .map((issue) => issue.message)
+                .join(", ");
+            return res.status(400).json({ success: false, message });
+        }
+        res.status(400).json({
+            success: false,
+            message: (error as Error).message,
+        });
+    }
+};
+
 
 export const createInitAdmin = async (req: Request, res: Response) => {
     try {

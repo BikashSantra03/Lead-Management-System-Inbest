@@ -8,18 +8,22 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  email     String   @unique
-  password  String // Hashed
-  role      Role     @default(SALES_REP)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  name            String
+  email           String    @unique
+  password        String    // Hashed
+  role            Role      @default(SALES_REP)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
 
   // Relations
-  assignedLeads Lead[] @relation("AssignedToUser") // Leads assigned to this rep
-  createdLeads  Lead[] @relation("CreatedByUser") // Leads created by manager
+  assignedLeads   Lead[]    @relation("AssignedToUser") // Leads assigned to this rep
+  createdLeads    Lead[]    @relation("CreatedByUser")  // Leads created by manager
+  updatedLeads    Lead[]    @relation("UpdatedByUser")  // Leads updated by user
+  performedActivities Activity[] @relation("PerformedByActivity") // Activities performed by this user
 
   @@map("users")
+  // Removed @@index([email]) as it's redundant with @unique
 }
 
 model Lead {
@@ -30,28 +34,37 @@ model Lead {
   status     LeadStatus @default(NEW)
   notes      String?
   assignedTo String?    @db.ObjectId // User ID of Sales Rep
-  createdBy  String     @db.ObjectId // User ID of Manager
+  createdBy  String     @db.ObjectId // User ID of Manager/Admin
+  updatedBy  String?    @db.ObjectId // For updates (Sales Rep or Manager)
   activities Activity[]
 
   userAssignedTo User? @relation("AssignedToUser", fields: [assignedTo], references: [id])
   userCreatedBy  User  @relation("CreatedByUser", fields: [createdBy], references: [id])
+  userUpdatedBy  User? @relation("UpdatedByUser", fields: [updatedBy], references: [id])
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@map("leads")
+  @@index([assignedTo]) // Quick lookups for sales reps
+  @@index([createdBy])
+  @@index([status, assignedTo]) // Optimized for sales rep filtering by status
 }
 
 model Activity {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  type      String // e.g., "ASSIGNMENT", "ENGAGE"
-  note      String
-  timestamp DateTime @default(now())
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  type        String   // e.g., "ASSIGNMENT", "ENGAGE", "UPDATE"
+  note        String
+  timestamp   DateTime @default(now())
+  performedBy String?  @db.ObjectId // User ID who performed the action
+  user        User?    @relation("PerformedByActivity", fields: [performedBy], references: [id])
 
   leadId String @db.ObjectId
   lead   Lead   @relation(fields: [leadId], references: [id], onDelete: Cascade)
 
   @@map("activities")
+  @@index([leadId])
+  @@index([timestamp]) // For sorting recent activities
 }
 
 enum Role {

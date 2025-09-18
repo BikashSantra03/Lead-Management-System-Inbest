@@ -1,6 +1,13 @@
+import { LeadStatus } from "@prisma/client";
 import { z } from "zod";
 
+export const loginSchema = z.object({
+    email: z.email({ message: "Invalid email address" }),
+    password: z.string({ message: "Password is required" }),
+});
+
 export const registerSchema = z.object({
+    name: z.string().min(1, { message: "Name is required" }),
     email: z.email({ message: "Invalid email address" }),
     password: z
         .string()
@@ -10,20 +17,11 @@ export const registerSchema = z.object({
     }), // Admin can't register admins
 });
 
-
-export const loginSchema = z.object({
-    email: z.email({ message: "Invalid email address" }),
-    password: z.string({ message: "Password is required" }),
-});
-
-
 export const updatePasswordSchema = z
     .object({
-        currentPassword: z
-            .string()
-            .min(6, {
-                message: "Current password must be at least 6 characters",
-            }),
+        currentPassword: z.string().min(6, {
+            message: "Current password must be at least 6 characters",
+        }),
         newPassword: z
             .string()
             .min(8, { message: "New password must be at least 8 characters" })
@@ -44,28 +42,9 @@ export const updatePasswordSchema = z
         path: ["newPassword"],
     });
 
-
-
-export const createLeadSchema = z.object({
-    name: z.string({ message: "Name is required" }),
-    email: z.email({ message: "Invalid email address" }).optional(),
-    phone: z.string({ message: "Invalid phone number" }).optional(),
-});
-
-
-export const updateLeadSchema = z.object({
-    status: z.enum(["ENGAGED", "DISPOSED"]).optional(), // Reps only
-    notes: z.string().optional(),
-});
-
-
-export const assignLeadSchema = z.object({
-    assignedTo: z.string(), // User ID
-});
-
-
 export const adminRegisterSchema = z.object({
-    email: z.string().email({ message: "Invalid email address" }),
+    name: z.string().min(1, { message: "Name is required" }),
+    email: z.email({ message: "Invalid email address" }),
     password: z
         .string()
         .min(8, { message: "Admin password must be at least 8 characters" })
@@ -77,4 +56,30 @@ export const adminRegisterSchema = z.object({
             message: "Admin password must contain at least one number",
         }),
     role: z.literal("ADMIN", { message: "Role must be ADMIN" }),
+});
+
+// Lead Schemas
+export const createLeadSchema = z.object({
+    name: z.string().min(1, { message: "Name is required" }),
+    email: z.email({ message: "Invalid email address" }).optional(),
+    phone: z.string().optional(),
+    // status optional, defaults to NEW in DB
+    notes: z.string().optional(),
+});
+
+export const updateLeadSchema = z.object({
+    status: z
+        .enum(["ENGAGED", "DISPOSED"], {
+            message: "Status must be ENGAGED or DISPOSED for sales reps",
+        })
+        .optional(),
+    notes: z.string().optional(),
+});
+
+export const assignLeadSchema = z.object({
+    assignedTo: z.string(), // Sales Rep User ID
+});
+
+export const getLeadsQuerySchema = z.object({
+    status: z.enum(LeadStatus).optional(), // Filter by status
 });

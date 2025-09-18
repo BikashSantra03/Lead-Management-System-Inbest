@@ -22,7 +22,7 @@ app.use(express.json());
 
 //routes
 app.use("/api/auth", authRoutes);
-// app.use("/api/leads", leadRoutes);
+app.use("/api/leads", leadRoutes);
 
 //default API
 app.get("/", (req, res) => {
