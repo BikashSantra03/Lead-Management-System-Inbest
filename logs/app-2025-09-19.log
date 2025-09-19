@@ -1,0 +1,390 @@
+undefined [31merror[39m: 	uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+    at createTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"error":{"diagnosticCodes":[1109]},"stack":"TSError: ⨯ Unable to compile TypeScript:\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m81\u001b[0m:\u001b[93m7\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1109: \u001b[0mExpression expected.\r\n\r\n\u001b[7m81\u001b[0m https://www.inbestnow.com/\r\n\u001b[7m  \u001b[0m \u001b[91m      \u001b[0m\r\n\n    at createTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:859:12)\n    at reportTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:863:19)\n    at getOutput (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1077:36)\n    at Object.compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1433:41)\n    at Module.m._compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1617:30)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)\n    at Function._load (node:internal/modules/cjs/loader:1108:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","exception":true,"date":"Fri Sep 19 2025 20:17:59 GMT+0530 (India Standard Time)","process":{"pid":19020,"uid":null,"gid":null,"cwd":"C:\\Users\\santr\\lead-management-system","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v22.14.0","argv":["C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\dist\\bin.js","C:\\Users\\santr\\lead-management-system\\src\\server.ts"],"memoryUsage":{"rss":240164864,"heapTotal":193769472,"heapUsed":163259080,"external":7880645,"arrayBuffers":4878319}},"os":{"loadavg":[0,0,0],"uptime":85736.125},"trace":[{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"createTSError","line":859,"method":null,"native":false},{"column":19,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"reportTSError","line":863,"method":null,"native":false},{"column":36,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"getOutput","line":1077,"method":null,"native":false},{"column":41,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.compile","line":1433,"method":"compile","native":false},{"column":30,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Module.m._compile","line":1617,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":null,"line":1706,"method":null,"native":false},{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.require.extensions.<computed> [as .ts]","line":1621,"method":"ts]","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1289,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Function._load","line":1108,"method":"_load","native":false},{"column":14,"file":"node:diagnostics_channel","function":"TracingChannel.traceSync","line":322,"method":"traceSync","native":false}],"timestamp":"2025-09-19 20:17:59"}
+undefined [31merror[39m: 	uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m3[0m - [91merror[0m[90m TS2304: [0mCannot find name 'a'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m  ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'href'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m117[0m - [91merror[0m[90m TS2304: [0mCannot find name 'alt'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                    ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m'>' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m        ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m117[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                    ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m141[0m - [91merror[0m[90m TS1110: [0mType expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                                            ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m3[0m - [91merror[0m[90m TS2304: [0mCannot find name 'a'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m  ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'href'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m117[0m - [91merror[0m[90m TS2304: [0mCannot find name 'alt'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                    ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m'>' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m        ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m117[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                    ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m141[0m - [91merror[0m[90m TS1110: [0mType expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                                            ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+    at createTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"error":{"diagnosticCodes":[2304,2304,2304,1005,1005,1005,1110,1109]},"stack":"TSError: ⨯ Unable to compile TypeScript:\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m3\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2304: \u001b[0mCannot find name 'a'.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m  ~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m5\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2304: \u001b[0mCannot find name 'href'.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m    ~~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m117\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2304: \u001b[0mCannot find name 'alt'.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m                                                                                                                    ~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m5\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m'>' expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m    ~~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m9\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m';' expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m        ~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m117\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m';' expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m                                                                                                                    ~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m141\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1110: \u001b[0mType expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m                                                                                                                                            ~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m81\u001b[0m:\u001b[93m7\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1109: \u001b[0mExpression expected.\r\n\r\n\u001b[7m81\u001b[0m https://www.inbestnow.com/\r\n\u001b[7m  \u001b[0m \u001b[91m      \u001b[0m\r\n\n    at createTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:859:12)\n    at reportTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:863:19)\n    at getOutput (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1077:36)\n    at Object.compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1433:41)\n    at Module.m._compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1617:30)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)\n    at Function._load (node:internal/modules/cjs/loader:1108:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","exception":true,"date":"Fri Sep 19 2025 20:18:05 GMT+0530 (India Standard Time)","process":{"pid":12048,"uid":null,"gid":null,"cwd":"C:\\Users\\santr\\lead-management-system","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v22.14.0","argv":["C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\dist\\bin.js","C:\\Users\\santr\\lead-management-system\\src\\server.ts"],"memoryUsage":{"rss":242155520,"heapTotal":193245184,"heapUsed":163530048,"external":7880581,"arrayBuffers":4878255}},"os":{"loadavg":[0,0,0],"uptime":85742.515},"trace":[{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"createTSError","line":859,"method":null,"native":false},{"column":19,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"reportTSError","line":863,"method":null,"native":false},{"column":36,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"getOutput","line":1077,"method":null,"native":false},{"column":41,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.compile","line":1433,"method":"compile","native":false},{"column":30,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Module.m._compile","line":1617,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":null,"line":1706,"method":null,"native":false},{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.require.extensions.<computed> [as .ts]","line":1621,"method":"ts]","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1289,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Function._load","line":1108,"method":"_load","native":false},{"column":14,"file":"node:diagnostics_channel","function":"TracingChannel.traceSync","line":322,"method":"traceSync","native":false}],"timestamp":"2025-09-19 20:18:05"}
+undefined [31merror[39m: 	uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m3[0m - [91merror[0m[90m TS2304: [0mCannot find name 'a'.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m  ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'href'.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m38[0m - [91merror[0m[90m TS2304: [0mCannot find name 'alt'.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                     ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m42[0m - [91merror[0m[90m TS2365: [0mOperator '>' cannot be applied to types 'string' and 'number'.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m81[0m /
+[7m  [0m [91m~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m'>' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m        ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m38[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                     ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m62[0m - [91merror[0m[90m TS1110: [0mType expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                             ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m2[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m /
+[7m  [0m [91m [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m3[0m - [91merror[0m[90m TS2304: [0mCannot find name 'a'.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m  ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'href'.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m38[0m - [91merror[0m[90m TS2304: [0mCannot find name 'alt'.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                     ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m42[0m - [91merror[0m[90m TS2365: [0mOperator '>' cannot be applied to types 'string' and 'number'.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m81[0m /
+[7m  [0m [91m~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m'>' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m        ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m38[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                     ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m62[0m - [91merror[0m[90m TS1110: [0mType expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                             ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m2[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m /
+[7m  [0m [91m [0m
+
+    at createTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"error":{"diagnosticCodes":[2304,2304,2304,2365,1005,1005,1005,1110,1109]},"stack":"TSError: ⨯ Unable to compile TypeScript:\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m3\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2304: \u001b[0mCannot find name 'a'.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m  ~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m5\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2304: \u001b[0mCannot find name 'href'.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m    ~~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m38\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2304: \u001b[0mCannot find name 'alt'.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m                                     ~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m42\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2365: \u001b[0mOperator '>' cannot be applied to types 'string' and 'number'.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m                                         ~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\r\n\u001b[7m81\u001b[0m /\r\n\u001b[7m  \u001b[0m \u001b[91m~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m5\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m'>' expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m    ~~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m9\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m';' expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m        ~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m38\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m';' expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m                                     ~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m62\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1110: \u001b[0mType expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m                                                             ~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m81\u001b[0m:\u001b[93m2\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1109: \u001b[0mExpression expected.\r\n\r\n\u001b[7m81\u001b[0m /\r\n\u001b[7m  \u001b[0m \u001b[91m \u001b[0m\r\n\n    at createTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:859:12)\n    at reportTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:863:19)\n    at getOutput (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1077:36)\n    at Object.compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1433:41)\n    at Module.m._compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1617:30)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)\n    at Function._load (node:internal/modules/cjs/loader:1108:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","exception":true,"date":"Fri Sep 19 2025 20:18:15 GMT+0530 (India Standard Time)","process":{"pid":17680,"uid":null,"gid":null,"cwd":"C:\\Users\\santr\\lead-management-system","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v22.14.0","argv":["C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\dist\\bin.js","C:\\Users\\santr\\lead-management-system\\src\\server.ts"],"memoryUsage":{"rss":241242112,"heapTotal":192458752,"heapUsed":164458640,"external":7886853,"arrayBuffers":4878103}},"os":{"loadavg":[0,0,0],"uptime":85752.656},"trace":[{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"createTSError","line":859,"method":null,"native":false},{"column":19,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"reportTSError","line":863,"method":null,"native":false},{"column":36,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"getOutput","line":1077,"method":null,"native":false},{"column":41,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.compile","line":1433,"method":"compile","native":false},{"column":30,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Module.m._compile","line":1617,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":null,"line":1706,"method":null,"native":false},{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.require.extensions.<computed> [as .ts]","line":1621,"method":"ts]","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1289,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Function._load","line":1108,"method":"_load","native":false},{"column":14,"file":"node:diagnostics_channel","function":"TracingChannel.traceSync","line":322,"method":"traceSync","native":false}],"timestamp":"2025-09-19 20:18:15"}
+undefined [31merror[39m: 	uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m3[0m - [91merror[0m[90m TS2304: [0mCannot find name 'a'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m  ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'href'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m117[0m - [91merror[0m[90m TS2304: [0mCannot find name 'alt'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                    ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m121[0m - [91merror[0m[90m TS2365: [0mOperator '>' cannot be applied to types 'string' and 'number'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m81[0m /
+[7m  [0m [91m~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m'>' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m        ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m117[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                    ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m141[0m - [91merror[0m[90m TS1110: [0mType expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                                            ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m2[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m /
+[7m  [0m [91m [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m3[0m - [91merror[0m[90m TS2304: [0mCannot find name 'a'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m  ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'href'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m117[0m - [91merror[0m[90m TS2304: [0mCannot find name 'alt'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                    ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m121[0m - [91merror[0m[90m TS2365: [0mOperator '>' cannot be applied to types 'string' and 'number'.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m81[0m /
+[7m  [0m [91m~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m'>' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m    ~~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m        ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m117[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                    ~~~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m80[0m:[93m141[0m - [91merror[0m[90m TS1110: [0mType expected.
+
+[7m80[0m  <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="StudyNotion Logo"></a>
+[7m  [0m [91m                                                                                                                                            ~[0m
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m2[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m /
+[7m  [0m [91m [0m
+
+    at createTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"error":{"diagnosticCodes":[2304,2304,2304,2365,1005,1005,1005,1110,1109]},"stack":"TSError: ⨯ Unable to compile TypeScript:\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m3\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2304: \u001b[0mCannot find name 'a'.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m  ~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m5\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2304: \u001b[0mCannot find name 'href'.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m    ~~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m117\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2304: \u001b[0mCannot find name 'alt'.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m                                                                                                                    ~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m121\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2365: \u001b[0mOperator '>' cannot be applied to types 'string' and 'number'.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\r\n\u001b[7m81\u001b[0m /\r\n\u001b[7m  \u001b[0m \u001b[91m~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m5\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m'>' expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m    ~~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m9\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m';' expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m        ~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m117\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m';' expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m                                                                                                                    ~~~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m80\u001b[0m:\u001b[93m141\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1110: \u001b[0mType expected.\r\n\r\n\u001b[7m80\u001b[0m  <a href=\"https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75\" alt=\"StudyNotion Logo\"></a>\r\n\u001b[7m  \u001b[0m \u001b[91m                                                                                                                                            ~\u001b[0m\r\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m81\u001b[0m:\u001b[93m2\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1109: \u001b[0mExpression expected.\r\n\r\n\u001b[7m81\u001b[0m /\r\n\u001b[7m  \u001b[0m \u001b[91m \u001b[0m\r\n\n    at createTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:859:12)\n    at reportTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:863:19)\n    at getOutput (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1077:36)\n    at Object.compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1433:41)\n    at Module.m._compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1617:30)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)\n    at Function._load (node:internal/modules/cjs/loader:1108:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","exception":true,"date":"Fri Sep 19 2025 20:18:30 GMT+0530 (India Standard Time)","process":{"pid":5504,"uid":null,"gid":null,"cwd":"C:\\Users\\santr\\lead-management-system","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v22.14.0","argv":["C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\dist\\bin.js","C:\\Users\\santr\\lead-management-system\\src\\server.ts"],"memoryUsage":{"rss":241512448,"heapTotal":192983040,"heapUsed":164419112,"external":7886885,"arrayBuffers":4878135}},"os":{"loadavg":[0,0,0],"uptime":85766.859},"trace":[{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"createTSError","line":859,"method":null,"native":false},{"column":19,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"reportTSError","line":863,"method":null,"native":false},{"column":36,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"getOutput","line":1077,"method":null,"native":false},{"column":41,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.compile","line":1433,"method":"compile","native":false},{"column":30,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Module.m._compile","line":1617,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":null,"line":1706,"method":null,"native":false},{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.require.extensions.<computed> [as .ts]","line":1621,"method":"ts]","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1289,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Function._load","line":1108,"method":"_load","native":false},{"column":14,"file":"node:diagnostics_channel","function":"TracingChannel.traceSync","line":322,"method":"traceSync","native":false}],"timestamp":"2025-09-19 20:18:30"}
+undefined [31merror[39m: 	uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+    at createTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"error":{"diagnosticCodes":[1109]},"stack":"TSError: ⨯ Unable to compile TypeScript:\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m81\u001b[0m:\u001b[93m7\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1109: \u001b[0mExpression expected.\r\n\r\n\u001b[7m81\u001b[0m https://www.inbestnow.com/\r\n\u001b[7m  \u001b[0m \u001b[91m      \u001b[0m\r\n\n    at createTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:859:12)\n    at reportTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:863:19)\n    at getOutput (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1077:36)\n    at Object.compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1433:41)\n    at Module.m._compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1617:30)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)\n    at Function._load (node:internal/modules/cjs/loader:1108:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","exception":true,"date":"Fri Sep 19 2025 20:18:42 GMT+0530 (India Standard Time)","process":{"pid":20304,"uid":null,"gid":null,"cwd":"C:\\Users\\santr\\lead-management-system","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v22.14.0","argv":["C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\dist\\bin.js","C:\\Users\\santr\\lead-management-system\\src\\server.ts"],"memoryUsage":{"rss":242098176,"heapTotal":193769472,"heapUsed":166370400,"external":7864216,"arrayBuffers":4884477}},"os":{"loadavg":[0,0,0],"uptime":85779},"trace":[{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"createTSError","line":859,"method":null,"native":false},{"column":19,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"reportTSError","line":863,"method":null,"native":false},{"column":36,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"getOutput","line":1077,"method":null,"native":false},{"column":41,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.compile","line":1433,"method":"compile","native":false},{"column":30,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Module.m._compile","line":1617,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":null,"line":1706,"method":null,"native":false},{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.require.extensions.<computed> [as .ts]","line":1621,"method":"ts]","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1289,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Function._load","line":1108,"method":"_load","native":false},{"column":14,"file":"node:diagnostics_channel","function":"TracingChannel.traceSync","line":322,"method":"traceSync","native":false}],"timestamp":"2025-09-19 20:18:42"}
+undefined [31merror[39m: 	uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+    at createTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"error":{"diagnosticCodes":[1109]},"stack":"TSError: ⨯ Unable to compile TypeScript:\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m81\u001b[0m:\u001b[93m7\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1109: \u001b[0mExpression expected.\r\n\r\n\u001b[7m81\u001b[0m https://www.inbestnow.com/\r\n\u001b[7m  \u001b[0m \u001b[91m      \u001b[0m\r\n\n    at createTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:859:12)\n    at reportTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:863:19)\n    at getOutput (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1077:36)\n    at Object.compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1433:41)\n    at Module.m._compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1617:30)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)\n    at Function._load (node:internal/modules/cjs/loader:1108:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","exception":true,"date":"Fri Sep 19 2025 20:21:42 GMT+0530 (India Standard Time)","process":{"pid":3656,"uid":null,"gid":null,"cwd":"C:\\Users\\santr\\lead-management-system","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v22.14.0","argv":["C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\dist\\bin.js","C:\\Users\\santr\\lead-management-system\\src\\server.ts"],"memoryUsage":{"rss":238804992,"heapTotal":192458752,"heapUsed":167219856,"external":7864248,"arrayBuffers":4884509}},"os":{"loadavg":[0,0,0],"uptime":85959.625},"trace":[{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"createTSError","line":859,"method":null,"native":false},{"column":19,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"reportTSError","line":863,"method":null,"native":false},{"column":36,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"getOutput","line":1077,"method":null,"native":false},{"column":41,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.compile","line":1433,"method":"compile","native":false},{"column":30,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Module.m._compile","line":1617,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":null,"line":1706,"method":null,"native":false},{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.require.extensions.<computed> [as .ts]","line":1621,"method":"ts]","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1289,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Function._load","line":1108,"method":"_load","native":false},{"column":14,"file":"node:diagnostics_channel","function":"TracingChannel.traceSync","line":322,"method":"traceSync","native":false}],"timestamp":"2025-09-19 20:21:42"}
+undefined [31merror[39m: 	uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+    at createTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"error":{"diagnosticCodes":[1109]},"stack":"TSError: ⨯ Unable to compile TypeScript:\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m81\u001b[0m:\u001b[93m7\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1109: \u001b[0mExpression expected.\r\n\r\n\u001b[7m81\u001b[0m https://www.inbestnow.com/\r\n\u001b[7m  \u001b[0m \u001b[91m      \u001b[0m\r\n\n    at createTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:859:12)\n    at reportTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:863:19)\n    at getOutput (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1077:36)\n    at Object.compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1433:41)\n    at Module.m._compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1617:30)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)\n    at Function._load (node:internal/modules/cjs/loader:1108:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","exception":true,"date":"Fri Sep 19 2025 20:22:00 GMT+0530 (India Standard Time)","process":{"pid":21952,"uid":null,"gid":null,"cwd":"C:\\Users\\santr\\lead-management-system","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v22.14.0","argv":["C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\dist\\bin.js","C:\\Users\\santr\\lead-management-system\\src\\server.ts"],"memoryUsage":{"rss":241311744,"heapTotal":193245184,"heapUsed":166578480,"external":7864184,"arrayBuffers":4884445}},"os":{"loadavg":[0,0,0],"uptime":85977.171},"trace":[{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"createTSError","line":859,"method":null,"native":false},{"column":19,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"reportTSError","line":863,"method":null,"native":false},{"column":36,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"getOutput","line":1077,"method":null,"native":false},{"column":41,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.compile","line":1433,"method":"compile","native":false},{"column":30,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Module.m._compile","line":1617,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":null,"line":1706,"method":null,"native":false},{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.require.extensions.<computed> [as .ts]","line":1621,"method":"ts]","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1289,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Function._load","line":1108,"method":"_load","native":false},{"column":14,"file":"node:diagnostics_channel","function":"TracingChannel.traceSync","line":322,"method":"traceSync","native":false}],"timestamp":"2025-09-19 20:22:00"}
+undefined [31merror[39m: 	uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+    at createTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"error":{"diagnosticCodes":[1109]},"stack":"TSError: ⨯ Unable to compile TypeScript:\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m81\u001b[0m:\u001b[93m7\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1109: \u001b[0mExpression expected.\r\n\r\n\u001b[7m81\u001b[0m https://www.inbestnow.com/\r\n\u001b[7m  \u001b[0m \u001b[91m      \u001b[0m\r\n\n    at createTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:859:12)\n    at reportTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:863:19)\n    at getOutput (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1077:36)\n    at Object.compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1433:41)\n    at Module.m._compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1617:30)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)\n    at Function._load (node:internal/modules/cjs/loader:1108:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","exception":true,"date":"Fri Sep 19 2025 20:22:08 GMT+0530 (India Standard Time)","process":{"pid":10340,"uid":null,"gid":null,"cwd":"C:\\Users\\santr\\lead-management-system","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v22.14.0","argv":["C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\dist\\bin.js","C:\\Users\\santr\\lead-management-system\\src\\server.ts"],"memoryUsage":{"rss":239099904,"heapTotal":192458752,"heapUsed":166805640,"external":7864080,"arrayBuffers":4884341}},"os":{"loadavg":[0,0,0],"uptime":85985.125},"trace":[{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"createTSError","line":859,"method":null,"native":false},{"column":19,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"reportTSError","line":863,"method":null,"native":false},{"column":36,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"getOutput","line":1077,"method":null,"native":false},{"column":41,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.compile","line":1433,"method":"compile","native":false},{"column":30,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Module.m._compile","line":1617,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":null,"line":1706,"method":null,"native":false},{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.require.extensions.<computed> [as .ts]","line":1621,"method":"ts]","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1289,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Function._load","line":1108,"method":"_load","native":false},{"column":14,"file":"node:diagnostics_channel","function":"TracingChannel.traceSync","line":322,"method":"traceSync","native":false}],"timestamp":"2025-09-19 20:22:08"}
+undefined [31merror[39m: 	uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/mail/templates/registrationSuccess.ts[0m:[93m81[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m81[0m https://www.inbestnow.com/
+[7m  [0m [91m      [0m
+
+    at createTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\santr\lead-management-system\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {"error":{"diagnosticCodes":[1109]},"stack":"TSError: ⨯ Unable to compile TypeScript:\n\u001b[96msrc/mail/templates/registrationSuccess.ts\u001b[0m:\u001b[93m81\u001b[0m:\u001b[93m7\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1109: \u001b[0mExpression expected.\r\n\r\n\u001b[7m81\u001b[0m https://www.inbestnow.com/\r\n\u001b[7m  \u001b[0m \u001b[91m      \u001b[0m\r\n\n    at createTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:859:12)\n    at reportTSError (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:863:19)\n    at getOutput (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1077:36)\n    at Object.compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1433:41)\n    at Module.m._compile (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1617:30)\n    at node:internal/modules/cjs/loader:1706:10\n    at Object.require.extensions.<computed> [as .ts] (C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts:1621:12)\n    at Module.load (node:internal/modules/cjs/loader:1289:32)\n    at Function._load (node:internal/modules/cjs/loader:1108:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)","exception":true,"date":"Fri Sep 19 2025 20:22:12 GMT+0530 (India Standard Time)","process":{"pid":13964,"uid":null,"gid":null,"cwd":"C:\\Users\\santr\\lead-management-system","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v22.14.0","argv":["C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\dist\\bin.js","C:\\Users\\santr\\lead-management-system\\src\\server.ts"],"memoryUsage":{"rss":237805568,"heapTotal":191934464,"heapUsed":167526960,"external":7869952,"arrayBuffers":4890213}},"os":{"loadavg":[0,0,0],"uptime":85989.453},"trace":[{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"createTSError","line":859,"method":null,"native":false},{"column":19,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"reportTSError","line":863,"method":null,"native":false},{"column":36,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"getOutput","line":1077,"method":null,"native":false},{"column":41,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.compile","line":1433,"method":"compile","native":false},{"column":30,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Module.m._compile","line":1617,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":null,"line":1706,"method":null,"native":false},{"column":12,"file":"C:\\Users\\santr\\lead-management-system\\node_modules\\ts-node\\src\\index.ts","function":"Object.require.extensions.<computed> [as .ts]","line":1621,"method":"ts]","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":1289,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Function._load","line":1108,"method":"_load","native":false},{"column":14,"file":"node:diagnostics_channel","function":"TracingChannel.traceSync","line":322,"method":"traceSync","native":false}],"timestamp":"2025-09-19 20:22:12"}

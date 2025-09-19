@@ -1,16 +1,21 @@
-import bcrypt from "bcrypt";
+import prisma from "../config/database";
 import jwt from "jsonwebtoken";
 import { z } from "zod";
-import prisma from "../config/database";
 import {
     registerSchema,
     loginSchema,
-    adminRegisterSchema,
     updatePasswordSchema,
 } from "../utils/validators";
-import { Role } from "@prisma/client";
+import { comparePassword, hashPassword } from "../utils";
 import logger from "../utils/logger";
+import { registrationSuccess } from "../mail/templates/registrationSuccess";
+import mailSender from "../utils/mailsender";
 
+/**
+ * User Login Service
+ * @param data
+ * @returns
+ */
 export const loginUser = async (data: z.infer<typeof loginSchema>) => {
     try {
         // Validate input data
@@ -21,24 +26,12 @@ export const loginUser = async (data: z.infer<typeof loginSchema>) => {
             where: { email: validatedData.email },
         });
         if (!user) {
-            const error = new Error(
-                "User not registered, please register first!"
-            );
-            logger.error(`Login failed: ${error.message}`, {
-                email: validatedData.email,
-            });
-            throw error;
+            throw new Error("User not registered, please register first!");
         }
 
-        // Check if password matches
-        if (!(await bcrypt.compare(validatedData.password, user.password))) {
-            const error = new Error("Invalid credentials");
-            logger.error(`Login failed: ${error.message}`, {
-                email: validatedData.email,
-            });
-            throw error;
+        if (!(await comparePassword(validatedData.password, user.password))) {
+            throw new Error("Invalid credentials");
         }
-
         // Generate JWT token
         const token = jwt.sign(
             { id: user.id, role: user.role },
@@ -58,15 +51,15 @@ export const loginUser = async (data: z.infer<typeof loginSchema>) => {
             token,
         };
     } catch (error: any) {
-        // Log validation or unexpected errors
-        logger.error(`Login error: ${error.message}`, {
-            email: data.email,
-            error,
-        });
         throw error; // Rethrow for controller to handle
     }
 };
 
+/**
+ * User Registration Service
+ * @param data
+ * @returns
+ */
 export const registerUser = async (data: z.infer<typeof registerSchema>) => {
     try {
         // Validate input data
@@ -76,21 +69,26 @@ export const registerUser = async (data: z.infer<typeof registerSchema>) => {
         const existingUser = await prisma.user.findUnique({
             where: { email: validatedData.email },
         });
+
         if (existingUser) {
-            const error = new Error("User with this email already exists");
-            logger.error(`Registration failed: ${error.message}`, {
-                email: validatedData.email,
-            });
-            throw error;
+            throw new Error("User with this email already exists");
         }
 
         // Hash password
-        const hashedPassword = await bcrypt.hash(validatedData.password, 10);
+        const hashedPassword = await hashPassword(validatedData.password, 10);
 
         // Create user
         const user = await prisma.user.create({
             data: { ...validatedData, password: hashedPassword },
         });
+
+        // Send registration email with username, email, and plain-text password
+        const emailBody = registrationSuccess(
+            user.email,
+            user.name,
+            validatedData.password
+        );
+        await mailSender(user.email, "Registration Successful", emailBody);
 
         // Log successful registration
         logger.info(`User registered successfully`, {
@@ -110,6 +108,12 @@ export const registerUser = async (data: z.infer<typeof registerSchema>) => {
     }
 };
 
+/**
+ * Update Password Service
+ * @param userId
+ * @param data
+ * @returns
+ */
 export const updateUserPassword = async (
     userId: string,
     data: z.infer<typeof updatePasswordSchema>
@@ -123,29 +127,24 @@ export const updateUserPassword = async (
             where: { id: userId },
         });
         if (!user) {
-            const error = new Error("User not found");
-            logger.error(`Password update failed: ${error.message}`, {
-                userId,
-            });
-            throw error;
+            throw new Error("User not found");
         }
 
         // Verify current password
         if (
-            !(await bcrypt.compare(
+            !(await comparePassword(
                 validatedData.currentPassword,
                 user.password
             ))
         ) {
-            const error = new Error("Current password is incorrect");
-            logger.error(`Password update failed: ${error.message}`, {
-                userId,
-            });
-            throw error;
+            throw new Error("Current password is incorrect");
         }
 
         // Hash new password
-        const hashedPassword = await bcrypt.hash(validatedData.newPassword, 10);
+        const hashedPassword = await hashPassword(
+            validatedData.newPassword,
+            10
+        );
 
         // Update password
         await prisma.user.update({
@@ -153,77 +152,8 @@ export const updateUserPassword = async (
             data: { password: hashedPassword },
         });
 
-        // Log successful password update
-        logger.info(`Password updated successfully`, {
-            userId,
-        });
-
         return { message: "Password updated successfully" };
     } catch (error: any) {
-        // Log validation or database errors
-        logger.error(`Password update error: ${error.message}`, {
-            userId,
-            error,
-        });
-        throw error; // Rethrow for controller
-    }
-};
-
-export const registerAdmin = async (
-    data: z.infer<typeof adminRegisterSchema>
-) => {
-    try {
-        // Validate input data
-        const validatedData = adminRegisterSchema.parse(data);
-
-        // Check if email exists
-        const existingUser = await prisma.user.findUnique({
-            where: { email: validatedData.email },
-        });
-        if (existingUser) {
-            const error = new Error("Email already in use");
-            logger.error(`Admin registration failed: ${error.message}`, {
-                email: validatedData.email,
-            });
-            throw error;
-        }
-
-        // Check if any admin exists (for one-time use)
-        const existingAdmin = await prisma.user.findFirst({
-            where: { role: Role.ADMIN },
-        });
-        if (existingAdmin) {
-            const error = new Error(
-                "Admin user already exists! Request admin to create your account."
-            );
-            logger.error(`Admin registration failed: ${error.message}`, {
-                email: validatedData.email,
-            });
-            throw error;
-        }
-
-        // Hash password with higher salt rounds for admin
-        const hashedPassword = await bcrypt.hash(validatedData.password, 12);
-
-        // Create admin user
-        const user = await prisma.user.create({
-            data: { ...validatedData, password: hashedPassword },
-        });
-
-        // Log successful admin registration
-        logger.info(`Admin registered successfully`, {
-            userId: user.id,
-            email: user.email,
-            role: user.role,
-        });
-
-        return { id: user.id, email: user.email, role: user.role };
-    } catch (error: any) {
-        // Log validation or database errors
-        logger.error(`Admin registration error: ${error.message}`, {
-            email: data.email,
-            error,
-        });
         throw error; // Rethrow for controller
     }
 };

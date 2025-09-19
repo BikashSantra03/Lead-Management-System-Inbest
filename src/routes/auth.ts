@@ -4,7 +4,6 @@ import { Role } from "@prisma/client";
 import { authenticateToken } from "../middleware/auth";
 import { requireRole } from "../middleware/rbac";
 import {
-    createInitAdmin,
     login,
     register,
     updatePassword,
@@ -22,7 +21,5 @@ router.post(
 ); // Admin-only
 
 router.put("/update-password", authenticateToken, updatePassword);
-
-router.post("/init-admin", createInitAdmin); // One-time admin creation, no auth required
 
 export default router;
