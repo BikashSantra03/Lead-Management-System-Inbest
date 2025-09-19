@@ -1,4 +1,4 @@
-# Lead Management System API Documentation
+# 🎯 Lead Management System API Documentation
 
 This section provides a table of all API routes for the Lead Management System, including authentication and lead management endpoints. Use Postman to test these APIs, ensuring proper authentication and role-based access control (RBAC).
 
