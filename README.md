@@ -4,7 +4,7 @@ This section provides a table of all API routes for the Lead Management System, 
 
 This section provides the folder structure and a table of all API routes for the Lead Management System, including authentication and lead management endpoints. Use Postman to test these APIs, ensuring proper authentication and role-based access control (RBAC).
 
-## Folder Structure
+## 📂 Folder Structure
 
 The project is organized as follows:
 
@@ -42,7 +42,7 @@ Before running the project, ensure you have the following installed and configur
    MAIL_USER=<your-email-address>
    MAIL_PASS=<your-email-PASS-KEY>
 
-## Database Setup with Prisma
+## ⛃ Database Setup with Prisma
 
 1. **Push Database Schema**:
 
@@ -63,11 +63,11 @@ Before running the project, ensure you have the following installed and configur
             npx prisma db seed
         ```
 
-## Base URL
+## 🔗 Base URL
 
 -   **Base URL**: `http://localhost:3000/api` (assuming the server runs on port 3000 in development).
 
-## Authentication
+## 🔐 Authentication
 
 -   **JWT Token**: Required for all `/leads` routes and `/auth/password`. Obtain via `POST /api/auth/login` and include in the `Authorization` header as `Bearer <token>`.
 -   **Roles**:
@@ -75,7 +75,7 @@ Before running the project, ensure you have the following installed and configur
     -   `SALES_REP`: Can view/update assigned leads (status: `ENGAGED` or `DISPOSED` only).
     -   `ADMIN`: Limited to authentication actions (no lead creation/deletion unless explicitly allowed).
 
-## API Routes
+## 🌐 API Routes
 
 | Method | URL                      | Headers                                                             | Body (if required)                                                                                                                            |
 | ------ | ------------------------ | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +154,7 @@ Before running the project, ensure you have the following installed and configur
     - **Errors**: 403 (non-`MANAGER`), 400 (lead not found), 401 (unauthorized).
     - **Notes**: Cascades to delete associated activities.
 
-## Testing the API with Postman
+## 👮 Testing the API with Postman
 
 To test the Lead Management System APIs, use the provided Postman collection via the public link or the local JSON file included in the repository.
 
