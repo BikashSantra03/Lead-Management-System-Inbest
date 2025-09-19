@@ -31,16 +31,21 @@ Before running the project, ensure you have the following installed and configur
 
     ```
 
-2. **Create a .env file in the project root with the following variables:**
-   PORT=3000
-   MONGODB_URI=<your-mongodb-uri>
-   JWT_SECRET=<your-jwt-secret>
-   NODE_ENV=development
-   LOG_DIR=logs
-   LOG_FILE=app-%DATE%.log
-   MAIL_HOST=smtp.gmail.com
-   MAIL_USER=<your-email-address>
-   MAIL_PASS=<your-email-PASS-KEY>
+2. **Create a `.env` file in the project root with the following variables**:
+
+    ```env
+    PORT=3000
+    MONGODB_URI=<your-mongodb-uri>
+    JWT_SECRET=<your-jwt-secret>
+    NODE_ENV=development
+    LOG_DIR=logs
+    LOG_FILE=app-%DATE%.log
+    MAIL_HOST=smtp.gmail.com
+    MAIL_USER=<your-email-address>
+    MAIL_PASS=<your-email-app-password>
+
+
+    ```
 
 ## ⛃ Database Setup with Prisma
 
