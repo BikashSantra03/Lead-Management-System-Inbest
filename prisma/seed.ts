@@ -1,10 +1,12 @@
-import { hashPassword } from "./../src/utils/index";
+import { hashPassword } from "../src/utils/index";
 import { PrismaClient } from "@prisma/client";
 import logger from "../src/utils/logger";
 
 const prisma = new PrismaClient();
 
 async function main() {
+    logger.info("Starting seed script");
+
     // Create Admin user (only if no admin exists)
     const adminCount = await prisma.user.count({ where: { role: "ADMIN" } });
     if (adminCount === 0) {
