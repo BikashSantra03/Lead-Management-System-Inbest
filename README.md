@@ -54,7 +54,7 @@ Before running the project, ensure you have the following installed and configur
     - Ensure `MONGODB_URI` is set in your `.env` file with your MongoDB connection string (e.g., `mongodb://localhost:27017/leadmgmt` for local or MongoDB Atlas URL).
     - Apply the Prisma schema to your MongoDB database:
         ```bash
-        npx prisma db push
+            npx prisma db push
         ```
 
 2. **Generate Prisma Client**:
@@ -76,7 +76,7 @@ Before running the project, ensure you have the following installed and configur
 
 -   **Base URL**: `http://localhost:3000/api` (assuming the server runs on port 3000 in development).
 
-## Run The Project
+## 🚀 Run The Project
 
     ```bash
         npm run dev
@@ -195,3 +195,7 @@ To test the Lead Management System APIs, use the provided Postman collection via
 -   Ensure the API server is running (`npm run dev`).
 -   Check logs in `logs/app-YYYY-MM-DD.log` for debugging.
 -   Email sending requires valid `MAIL_USER` and `MAIL_PASS` in `.env`.
+
+```
+
+```
