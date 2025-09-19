@@ -11,6 +11,11 @@ const utils_1 = require("../utils");
 const logger_1 = __importDefault(require("../utils/logger"));
 const registrationSuccess_1 = require("../mail/templates/registrationSuccess");
 const mailsender_1 = __importDefault(require("../utils/mailsender"));
+/**
+ * User Login Service
+ * @param data
+ * @returns
+ */
 const loginUser = async (data) => {
     try {
         // Validate input data
@@ -20,18 +25,10 @@ const loginUser = async (data) => {
             where: { email: validatedData.email },
         });
         if (!user) {
-            const error = new Error("User not registered, please register first!");
-            logger_1.default.error(`Login failed: ${error.message}`, {
-                email: validatedData.email,
-            });
-            throw error;
+            throw new Error("User not registered, please register first!");
         }
         if (!(await (0, utils_1.comparePassword)(validatedData.password, user.password))) {
-            const error = new Error("Invalid credentials");
-            logger_1.default.error(`Login failed: ${error.message}`, {
-                email: validatedData.email,
-            });
-            throw error;
+            throw new Error("Invalid credentials");
         }
         // Generate JWT token
         const token = jsonwebtoken_1.default.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, { expiresIn: "2h" });
@@ -47,15 +44,15 @@ const loginUser = async (data) => {
         };
     }
     catch (error) {
-        // Log validation or unexpected errors
-        logger_1.default.error(`Login error: ${error.message}`, {
-            email: data.email,
-            error,
-        });
         throw error; // Rethrow for controller to handle
     }
 };
 exports.loginUser = loginUser;
+/**
+ * User Registration Service
+ * @param data
+ * @returns
+ */
 const registerUser = async (data) => {
     try {
         // Validate input data
@@ -65,11 +62,7 @@ const registerUser = async (data) => {
             where: { email: validatedData.email },
         });
         if (existingUser) {
-            const error = new Error("User with this email already exists");
-            logger_1.default.error(`Registration failed: ${error.message}`, {
-                email: validatedData.email,
-            });
-            throw error;
+            throw new Error("User with this email already exists");
         }
         // Hash password
         const hashedPassword = await (0, utils_1.hashPassword)(validatedData.password, 10);
@@ -98,6 +91,12 @@ const registerUser = async (data) => {
     }
 };
 exports.registerUser = registerUser;
+/**
+ * Update Password Service
+ * @param userId
+ * @param data
+ * @returns
+ */
 const updateUserPassword = async (userId, data) => {
     try {
         // Validate input data
@@ -107,19 +106,11 @@ const updateUserPassword = async (userId, data) => {
             where: { id: userId },
         });
         if (!user) {
-            const error = new Error("User not found");
-            logger_1.default.error(`Password update failed: ${error.message}`, {
-                userId,
-            });
-            throw error;
+            throw new Error("User not found");
         }
         // Verify current password
         if (!(await (0, utils_1.comparePassword)(validatedData.currentPassword, user.password))) {
-            const error = new Error("Current password is incorrect");
-            logger_1.default.error(`Password update failed: ${error.message}`, {
-                userId,
-            });
-            throw error;
+            throw new Error("Current password is incorrect");
         }
         // Hash new password
         const hashedPassword = await (0, utils_1.hashPassword)(validatedData.newPassword, 10);
@@ -128,18 +119,9 @@ const updateUserPassword = async (userId, data) => {
             where: { id: userId },
             data: { password: hashedPassword },
         });
-        // Log successful password update
-        logger_1.default.info(`Password updated successfully`, {
-            userId,
-        });
         return { message: "Password updated successfully" };
     }
     catch (error) {
-        // Log validation or database errors
-        logger_1.default.error(`Password update error: ${error.message}`, {
-            userId,
-            error,
-        });
         throw error; // Rethrow for controller
     }
 };

@@ -78,8 +78,12 @@ const getLeads = async (userId, role, query) => {
             where,
             orderBy: { createdAt: "desc" }, // Sort by creation date (newest first)
             include: {
-                userAssignedTo: { select: { id: true, name: true, email: true } },
-                userCreatedBy: { select: { id: true, name: true, email: true } },
+                userAssignedTo: {
+                    select: { id: true, name: true, email: true },
+                },
+                userCreatedBy: {
+                    select: { id: true, name: true, email: true },
+                },
                 activities: {
                     orderBy: { timestamp: "desc" },
                     include: {
@@ -128,9 +132,15 @@ const getLeadById = async (id, userId, role) => {
         const lead = await database_1.default.lead.findFirst({
             where,
             include: {
-                userAssignedTo: { select: { id: true, name: true, email: true } }, // Assignee
-                userCreatedBy: { select: { id: true, name: true, email: true } }, // Creator
-                userUpdatedBy: { select: { id: true, name: true, email: true } }, // Last updater
+                userAssignedTo: {
+                    select: { id: true, name: true, email: true },
+                }, // Assignee
+                userCreatedBy: {
+                    select: { id: true, name: true, email: true },
+                }, // Creator
+                userUpdatedBy: {
+                    select: { id: true, name: true, email: true },
+                }, // Last updater
                 activities: {
                     orderBy: { timestamp: "desc" },
                     include: {
@@ -210,7 +220,9 @@ const updateLead = async (id, data, userId, role) => {
                 data: {
                     ...validatedData,
                     updatedBy: userId,
-                    ...(validatedData.status && { status: validatedData.status }), // Only update status if provided
+                    ...(validatedData.status && {
+                        status: validatedData.status,
+                    }), // Only update status if provided
                 },
                 include: {
                     userAssignedTo: {
@@ -223,7 +235,9 @@ const updateLead = async (id, data, userId, role) => {
                     activities: {
                         orderBy: { timestamp: "desc" },
                         include: {
-                            user: { select: { id: true, name: true, role: true } },
+                            user: {
+                                select: { id: true, name: true, role: true },
+                            },
                         },
                     },
                 },
@@ -313,7 +327,9 @@ const assignLead = async (id, data, managerId) => {
                     activities: {
                         orderBy: { timestamp: "desc" },
                         include: {
-                            user: { select: { id: true, name: true, role: true } },
+                            user: {
+                                select: { id: true, name: true, role: true },
+                            },
                         },
                     },
                 },
