@@ -67,10 +67,20 @@ Before running the project, ensure you have the following installed and configur
         ```bash
             npx prisma db seed
         ```
+4. **Track the Database from Prisma Studio**:
+    ```bash
+        npx prisma studio
+    ```
 
 ## 🔗 Base URL
 
 -   **Base URL**: `http://localhost:3000/api` (assuming the server runs on port 3000 in development).
+
+## Run The Project
+
+    ```bash
+        npm run dev
+    ```
 
 ## 🔐 Authentication
 
@@ -182,6 +192,6 @@ To test the Lead Management System APIs, use the provided Postman collection via
 
 **Notes**:
 
--   Ensure the API server is running (`npm run start`).
+-   Ensure the API server is running (`npm run dev`).
 -   Check logs in `logs/app-YYYY-MM-DD.log` for debugging.
 -   Email sending requires valid `MAIL_USER` and `MAIL_PASS` in `.env`.
