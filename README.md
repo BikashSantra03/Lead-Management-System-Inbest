@@ -78,9 +78,8 @@ Before running the project, ensure you have the following installed and configur
 
 ## 🚀 Run The Project
 
-    ```bash
+        ```bash
         npm run dev
-    ```
 
 ## 🔐 Authentication
 
@@ -195,6 +194,10 @@ To test the Lead Management System APIs, use the provided Postman collection via
 -   Ensure the API server is running (`npm run dev`).
 -   Check logs in `logs/app-YYYY-MM-DD.log` for debugging.
 -   Email sending requires valid `MAIL_USER` and `MAIL_PASS` in `.env`.
+
+```
+
+```
 
 ```
 
