@@ -78,7 +78,6 @@ Before running the project, ensure you have the following installed and configur
 
 ## 🚀 Run The Project
 
-        ```bash
         npm run dev
 
 ## 🔐 Authentication
