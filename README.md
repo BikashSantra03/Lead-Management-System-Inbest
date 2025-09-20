@@ -112,12 +112,12 @@ Before running the project, ensure you have the following installed and configur
 
 2. **POST /auth/register**
 
-    - **Description**: Registers a new user (role: `SALES_REP` or `MANAGER`).
+    - **Description**: Registers a new user (role: `SALES_REP` or `MANAGER`) (restricted to `ADMIN`).
     - **Success**: 201 Created, returns `{ success: true, data: { id, email, name, role } }`.
     - **Errors**: 400 (email exists, invalid input).
     - **Notes**: Use `registerSchema` for valid roles.
 
-3. **PUT /auth/password**
+3. **PUT /auth/update-password**
 
     - **Description**: Updates the authenticated user's password.
     - **Success**: 200 OK, returns `{ success: true, data: { message: "Password updated successfully" } }`.
@@ -190,4 +190,4 @@ To test the Lead Management System APIs, use the provided Postman collection via
 
 -   Ensure the API server is running (`npm run dev`).
 -   Check logs in `logs/app-YYYY-MM-DD.log` for debugging.
--   Email sending requires valid `MAIL_USER` and `MAIL_PASS` in `.env`.
+-   Email sending requires valid `MAIL_USER` and `MAIL_APP_PASS` in `.env`.
