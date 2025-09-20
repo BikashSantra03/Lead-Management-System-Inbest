@@ -2,8 +2,6 @@
 
 This section provides a table of all API routes for the Lead Management System, including authentication and lead management endpoints. Use Postman to test these APIs, ensuring proper authentication and role-based access control (RBAC).
 
-This section provides the folder structure and a table of all API routes for the Lead Management System, including authentication and lead management endpoints. Use Postman to test these APIs, ensuring proper authentication and role-based access control (RBAC).
-
 ## 📂 Folder Structure
 
 The project is organized as follows:
@@ -20,7 +18,6 @@ The project is organized as follows:
 -   **prisma/seed.ts**: Seeding the database with initial data.
 -   **.env**: Environment variables (e.g., `JWT_SECRET`, `MONGODB_URI`).
 -   **package.json**: Project dependencies and scripts.
-
 
 ## 📦 Prerequisites
 
@@ -95,14 +92,13 @@ Before running the project, ensure you have the following installed and configur
 | Method | URL                      | Headers                                                             | Body (if required)                                                                                                                            |
 | ------ | ------------------------ | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | POST   | `/auth/login`            | `Content-Type: application/json`                                    | `json<br>{<br>  "email": "manager@example.com",<br>  "password": "password123"<br>}<br>`                                                      |
-| POST   | `/auth/register`         | `Content-Type: application/json`                                    | `json<br>{<br>  "email": "newuser@example.com",<br>  "password": "password123",<br>  "name": "New User",<br>  "role": "SALES_REP"<br>}<br>`   |
+| POST   | `/auth/register`         | `Content-Type: application/json`<br>`Authorization: Bearer <token>` | `json<br>{<br>  "email": "newuser@example.com",<br>  "password": "password123",<br>  "name": "New User",<br>  "role": "SALES_REP"<br>}<br>`   |
 | PUT    | `/auth/password`         | `Content-Type: application/json`<br>`Authorization: Bearer <token>` | `json<br>{<br>  "currentPassword": "password123",<br>  "newPassword": "newpassword456"<br>}<br>`                                              |
-| POST   | `/auth/admin/register`   | `Content-Type: application/json`                                    | `json<br>{<br>  "email": "admin@example.com",<br>  "password": "admin123",<br>  "name": "Admin User",<br>  "role": "ADMIN"<br>}<br>`          |
 | POST   | `/leads`                 | `Content-Type: application/json`<br>`Authorization: Bearer <token>` | `json<br>{<br>  "name": "Test Lead",<br>  "email": "test@example.com",<br>  "phone": "1234567890",<br>  "notes": "Potential client"<br>}<br>` |
 | GET    | `/leads?status=<status>` | `Authorization: Bearer <token>`                                     | None                                                                                                                                          |
 | GET    | `/leads/:id`             | `Authorization: Bearer <token>`                                     | None                                                                                                                                          |
 | PUT    | `/leads/:id`             | `Content-Type: application/json`<br>`Authorization: Bearer <token>` | `json<br>{<br>  "status": "ENGAGED",<br>  "notes": "Contacted client"<br>}<br>`                                                               |
-| PUT    | `/leads/:id/assign`      | `Content-Type: application/json`<br>`Authorization: Bearer <token>` | `json<br>{<br>  "assignedTo": "124"<br>}<br>`                                                                                                 |
+| PUT    | `/leads/:id/assign`      | `Content-Type: application/json`<br>`Authorization: Bearer <token>` | `json<br>{<br>  "assignedTo": "68ce5745ca156d9e678a98f3"<br>}<br>`                                                                            |
 | DELETE | `/leads/:id`             | `Authorization: Bearer <token>`                                     | None                                                                                                                                          |
 
 ### Route Details
