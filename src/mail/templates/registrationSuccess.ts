@@ -57,7 +57,7 @@ export const registrationSuccess = (
     
     <body>
         <div class="container">
-            <a href="https://www.inbestnow.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo_blue.4b277909.webp&w=256&q=75" alt="InBestNow Logo"></a>
+            <img src="https://media.licdn.com/dms/image/v2/D560BAQH3KTTxZj-M1w/company-logo_200_200/company-logo_200_200/0/1716377111254/inbest_baid_solution_llp_logo?e=2147483647&v=beta&t=Ow-iifuW3zqNfYjAMP-dQ760HHNjagcVVmsa-M1e89w" alt="InBestNow Logo">
             <div class="message">Registration Successful</div>
             <div class="body">
                 <p>Hey ${name},</p>
@@ -66,6 +66,7 @@ export const registrationSuccess = (
                 <p>Email: <span class="highlight">${email}</span></p>
                 <p>Password: <span class="highlight">${password}</span></p>
                 <p>Please keep this information secure and do not share it. If you did not request this registration, contact us immediately.</p>
+                <p>You can update your password at any time from your user profile settings in the Lead Management System.</p>
             </div>
             <div class="support">
                 If you have any questions or need assistance, reach out to us at

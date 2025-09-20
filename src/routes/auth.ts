@@ -1,25 +1,22 @@
 import express from "express";
-import { Role } from "@prisma/client";
-
 import { authenticateToken } from "../middleware/auth";
 import { requireRole } from "../middleware/rbac";
 import {
-    login,
-    register,
-    updatePassword,
+    loginHandler,
+    registerHandler,
+    updatePasswordHandler,
 } from "../controllers/authController";
-
+import { Role } from "@prisma/client";
 const router = express.Router();
 
-router.post("/login", login);
+router.post("/login", loginHandler);
 
 router.post(
     "/register",
     authenticateToken,
-    requireRole([Role.ADMIN]),
-    register
-); // Admin-only
-
-router.put("/update-password", authenticateToken, updatePassword);
+    requireRole([Role.ADMIN]), //Only Admin Can register other members
+    registerHandler
+);
+router.put("/update-password", authenticateToken, updatePasswordHandler);
 
 export default router;

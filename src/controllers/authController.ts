@@ -12,7 +12,13 @@ import {
 } from "../utils/validators";
 import { AuthRequest } from "../types";
 
-export const login = async (req: Request, res: Response) => {
+/**
+ * Login member controller
+ * @param req
+ * @param res
+ * @returns
+ */
+export const loginHandler = async (req: Request, res: Response) => {
     try {
         const validated = loginSchema.parse(req.body);
         const result = await loginUser(validated);
@@ -39,7 +45,14 @@ export const login = async (req: Request, res: Response) => {
     }
 };
 
-export const register = async (req: Request, res: Response) => {
+/**
+ * Register member controller
+ * Only Admin Can register other members
+ * @param req
+ * @param res
+ * @returns
+ */
+export const registerHandler = async (req: Request, res: Response) => {
     try {
         const validated = registerSchema.parse(req.body);
         // Only admins can register (checked via RBAC middleware)
@@ -62,7 +75,16 @@ export const register = async (req: Request, res: Response) => {
     }
 };
 
-export const updatePassword = async (req: AuthRequest, res: Response) => {
+/**
+ * Update Password Handler
+ * @param req
+ * @param res
+ * @returns
+ */
+export const updatePasswordHandler = async (
+    req: AuthRequest,
+    res: Response
+) => {
     try {
         // Validate input
         const validated = updatePasswordSchema.parse(req.body);

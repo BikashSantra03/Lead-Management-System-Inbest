@@ -187,7 +187,17 @@ export const getLeadById = async (id: string, userId: string, role: Role) => {
 
         return lead;
     } catch (error: any) {
-        // Log access or database errors
+        // Handle Prisma-specific errors (e.g., invalid ID format)
+        if (error instanceof Prisma.PrismaClientKnownRequestError) {
+            const errorMsg = "Lead not found or access denied"; // Generic message for invalid ID
+            logger.error(`Failed to retrieve lead ${id}: ${errorMsg}`, {
+                userId,
+                role,
+                originalError: error,
+            });
+            throw new Error(errorMsg);
+        }
+        // Log and rethrow other errors
         logger.error(`Failed to retrieve lead ${id}: ${error.message}`, {
             userId,
             role,
@@ -196,7 +206,6 @@ export const getLeadById = async (id: string, userId: string, role: Role) => {
         throw error; // Rethrow for controller
     }
 };
-
 /**
  * Updates a lead with role-based restrictions and logs activity
  * @param id

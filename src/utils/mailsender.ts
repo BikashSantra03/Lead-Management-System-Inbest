@@ -17,7 +17,7 @@ const mailSender = async (
             secure: false, // Use true for port 465, false for other ports
             auth: {
                 user: process.env.MAIL_USER,
-                pass: process.env.MAIL_PASS,
+                pass: process.env.MAIL_APP_PASS,
             },
         });
 

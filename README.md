@@ -15,10 +15,12 @@ The project is organized as follows:
 -   **src/services/**: Business logic for auth (`authService.ts`) and leads (`leadService.ts`), with centralized logging.
 -   **src/types/**: TypeScript type definitions (`index.ts`).
 -   **src/utils/**: Logger (`logger.ts`) and Zod validators (`validators.ts`).
--   **prisma/**: Prisma schema (`schema.prisma`) for database models.
+-   **src/app.ts**: Main Express application entry point.
+-   **prisma/schema.prisma**: Prisma schema (`schema.prisma`) for database models.
+-   **prisma/seed.ts**: Seeding the database with initial data.
 -   **.env**: Environment variables (e.g., `JWT_SECRET`, `MONGODB_URI`).
 -   **package.json**: Project dependencies and scripts.
--   **app.ts**: Main Express application entry point.
+
 
 ## 📦 Prerequisites
 
@@ -42,7 +44,7 @@ Before running the project, ensure you have the following installed and configur
     LOG_FILE=app-%DATE%.log
     MAIL_HOST=smtp.gmail.com
     MAIL_USER=<your-email-address>
-    MAIL_PASS=<your-email-app-password>
+    MAIL_APP_PASS=<your-email-app-password-16-digits>
 
 
     ```
@@ -171,7 +173,7 @@ Before running the project, ensure you have the following installed and configur
 
 To test the Lead Management System APIs, use the provided Postman collection via the public link or the local JSON file included in the repository.
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/navigation-cosmologist-79247986/workspace/lead-management-system-apis/collection/45058070-05c74aea-9e79-4b42-b65f-16c31ece56bf?action=share&creator=45058070)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/navigation-cosmologist-79247986/workspace/lead-management-system-inbest/collection/45058070-db683ed3-f86c-470f-b10b-050aa4728300?action=share&creator=45058070)
 
 **Steps**:
 

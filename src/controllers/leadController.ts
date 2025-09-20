@@ -1,5 +1,7 @@
 import { Response } from "express";
 import { Role } from "@prisma/client";
+import { z } from "zod";
+
 import {
     createLead,
     getLeads,
@@ -24,8 +26,17 @@ export const createLeadHandler = [
             const lead = await createLead(req.body, req.user!.id);
 
             res.status(201).json({ success: true, data: lead });
-        } catch (error: any) {
-            res.status(400).json({ success: false, message: error.message });
+        } catch (error) {
+            if (error instanceof z.ZodError) {
+                const message = error.issues
+                    .map((issue) => issue.message)
+                    .join(", ");
+                return res.status(400).json({ success: false, message });
+            }
+            res.status(400).json({
+                success: false,
+                message: (error as Error).message,
+            });
         }
     },
 ];
@@ -47,8 +58,17 @@ export const getLeadsHandler = [
             );
 
             res.json({ success: true, data: leads });
-        } catch (error: any) {
-            res.status(400).json({ success: false, message: error.message });
+        } catch (error) {
+            if (error instanceof z.ZodError) {
+                const message = error.issues
+                    .map((issue) => issue.message)
+                    .join(", ");
+                return res.status(400).json({ success: false, message });
+            }
+            res.status(400).json({
+                success: false,
+                message: (error as Error).message,
+            });
         }
     },
 ];
@@ -100,8 +120,17 @@ export const updateLeadHandler = [
             );
 
             res.json({ success: true, data: lead });
-        } catch (error: any) {
-            res.status(400).json({ success: false, message: error.message });
+        } catch (error) {
+            if (error instanceof z.ZodError) {
+                const message = error.issues
+                    .map((issue) => issue.message)
+                    .join(", ");
+                return res.status(400).json({ success: false, message });
+            }
+            res.status(400).json({
+                success: false,
+                message: (error as Error).message,
+            });
         }
     },
 ];
@@ -125,9 +154,17 @@ export const assignLeadHandler = [
             );
             // Return updated lead with new assignee and activity
             res.json({ success: true, data: lead });
-        } catch (error: any) {
-            // Handle errors (e.g., invalid sales rep ID, lead not found)
-            res.status(400).json({ success: false, message: error.message });
+        } catch (error) {
+            if (error instanceof z.ZodError) {
+                const message = error.issues
+                    .map((issue) => issue.message)
+                    .join(", ");
+                return res.status(400).json({ success: false, message });
+            }
+            res.status(400).json({
+                success: false,
+                message: (error as Error).message,
+            });
         }
     },
 ];

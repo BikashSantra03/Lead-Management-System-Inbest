@@ -40,9 +40,15 @@
               "listen": "test",
               "script": {
                 "exec": [
-                  "const response = pm.response.json();",
-                  "if (response.success && response.data.token) {",
-                  "    pm.environment.set('token', response.data.token);",
+                  "// Get the cookies from the response",
+                  "const cookies = pm.response.cookies;",
+                  "",
+                  "// Check if the 'Token' cookie exists and store it in the environment",
+                  "if (cookies.has('Token')) {",
+                  "    const token = cookies.get('Token');",
+                  "    pm.environment.set('token', token);",
+                  "} else {",
+                  "    console.log('Token cookie not found in response');",
                   "}"
                 ],
                 "type": "text/javascript"
@@ -58,6 +64,10 @@
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
               }
             ],
             "body": {
@@ -182,13 +192,13 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/leads/456",
+              "raw": "{{base_url}}/leads/68ce64ab75dc817ff92b3d8f",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
                 "leads",
-                "456"
+                "68ce64ab75dc817ff92b3d8f"
               ]
             }
           },
@@ -213,13 +223,13 @@
               "raw": "{\n  \"status\": \"ENGAGED\",\n  \"notes\": \"Contacted client\"\n}"
             },
             "url": {
-              "raw": "{{base_url}}/leads/456",
+              "raw": "{{base_url}}/leads/68ce64ab75dc817ff92b3d8f",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
                 "leads",
-                "456"
+                "68ce64ab75dc817ff92b3d8f"
               ]
             }
           },
@@ -241,16 +251,16 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"assignedTo\": \"124\"\n}"
+              "raw": "{\n  \"assignedTo\": \"68ce5745ca156d9e678a98f3\"\n}"
             },
             "url": {
-              "raw": "{{base_url}}/leads/456/assign",
+              "raw": "{{base_url}}/leads/68ce64ab75dc817ff92b3d8f/assign",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
                 "leads",
-                "456",
+                "68ce64ab75dc817ff92b3d8f",
                 "assign"
               ]
             }
@@ -268,13 +278,13 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/leads/456",
+              "raw": "{{base_url}}/leads/68ce64ab75dc817ff92b3d8f",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
                 "leads",
-                "456"
+                "68ce64ab75dc817ff92b3d8f"
               ]
             }
           },

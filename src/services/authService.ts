@@ -74,21 +74,35 @@ export const registerUser = async (data: z.infer<typeof registerSchema>) => {
             throw new Error("User with this email already exists");
         }
 
-        // Hash password
-        const hashedPassword = await hashPassword(validatedData.password, 10);
-
-        // Create user
-        const user = await prisma.user.create({
-            data: { ...validatedData, password: hashedPassword },
+        // Create user within a transaction
+        const user = await prisma.$transaction(async (tx) => {
+            const newUser = await tx.user.create({
+                data: {
+                    ...validatedData,
+                    password: await hashPassword(validatedData.password, 10),
+                },
+            });
+            return newUser;
         });
 
-        // Send registration email with username, email, and plain-text password
-        const emailBody = registrationSuccess(
-            user.email,
-            user.name,
-            validatedData.password
-        );
-        await mailSender(user.email, "Registration Successful", emailBody);
+        // Send registration email asynchronously
+        try {
+            const emailBody = registrationSuccess(
+                user.email,
+                user.name,
+                validatedData.password // Include plain-text password
+            );
+            await mailSender(user.email, "Registration Successful", emailBody);
+            logger.info(`Email sent successfully`, {
+                email: user.email,
+                messageId: "dynamic-message-id", // Replace with actual messageId if available
+            });
+        } catch (emailError: any) {
+            logger.error(`Email sending failed: ${emailError.message}`, {
+                email: user.email,
+                emailError,
+            });
+        }
 
         // Log successful registration
         logger.info(`User registered successfully`, {
@@ -99,7 +113,6 @@ export const registerUser = async (data: z.infer<typeof registerSchema>) => {
 
         return user;
     } catch (error: any) {
-        // Log validation or database errors
         logger.error(`Registration error: ${error.message}`, {
             email: data.email,
             error,
